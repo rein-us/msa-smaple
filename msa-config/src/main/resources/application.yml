@@ -1,0 +1,15 @@
+server:
+    port: 8071
+
+spring:
+    application:
+        name: msa-config
+    profiles:
+        active: native
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/rein-us/spring-cloud-config-example.git
+                    skipSslValidation: true
+        

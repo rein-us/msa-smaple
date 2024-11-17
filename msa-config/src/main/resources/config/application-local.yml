@@ -1,0 +1,10 @@
+spring:
+    config:
+        activate:
+            on-profile: local
+    cloud:
+        config:
+            server:
+#                 bootstrap: true
+                native: 
+                    search-locations: file:///Users/rein/workspace/intellij/okcheon/msa-sample/msa-config/src/main/resources/config

@@ -1,0 +1,27 @@
+spring:
+	application:
+		name: eureka-server
+    cloud:
+        discovery:
+            enabled: false
+        config:
+            enabled: false
+            import-check: 
+                enabled: false
+    config:
+        import: optional:configserver:http://localhost:8888
+
+server:
+    port: 8761
+
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-discovery: false
+    server:
+        wait-time-in-ms-when-sync-empty: 0
+
+logging:
+    level:
+        com.netflix.eureka: OFF
+        com.netflix.eureka.server: OFF
